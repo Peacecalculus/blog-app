@@ -1,0 +1,262 @@
+.page-container {
+  background: white;
+  border-radius: 12px;
+  padding: 2rem;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  animation: slideIn 0.3s ease-out;
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Hero Section */
+.hero {
+  text-align: center;
+  margin-bottom: 3rem;
+  padding-bottom: 2rem;
+  border-bottom: 2px solid #f0f0f0;
+}
+
+.hero h1 {
+  font-size: 2.5rem;
+  color: #667eea;
+  margin-bottom: 0.5rem;
+}
+
+.hero p {
+  font-size: 1.1rem;
+  color: #666;
+}
+
+/* Posts Grid */
+.posts-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+.post-card {
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 1.5rem;
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.post-card:hover {
+  box-shadow: 0 8px 24px rgba(102, 126, 234, 0.2);
+  transform: translateY(-4px);
+  border-color: #667eea;
+}
+
+.post-card h2 {
+  color: #333;
+  margin-bottom: 0.75rem;
+  font-size: 1.3rem;
+}
+
+.post-excerpt {
+  color: #666;
+  line-height: 1.6;
+  flex: 1;
+  margin-bottom: 1rem;
+}
+
+.post-meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.85rem;
+  color: #999;
+  margin-bottom: 1rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.read-more-btn {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  align-self: flex-start;
+}
+
+.read-more-btn:hover {
+  transform: translateX(4px);
+  box-shadow: 0 4px 12px rgba(102, 126, 234, 0.4);
+}
+
+/* Post Detail */
+.post-detail {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.post-header {
+  margin-bottom: 2rem;
+  padding-bottom: 2rem;
+  border-bottom: 2px solid #f0f0f0;
+}
+
+.post-header h1 {
+  font-size: 2rem;
+  color: #333;
+  margin-bottom: 1rem;
+}
+
+.post-meta-detail {
+  display: flex;
+  gap: 2rem;
+  color: #999;
+  font-size: 0.95rem;
+}
+
+.post-content {
+  line-height: 1.8;
+  color: #444;
+  margin-bottom: 2rem;
+}
+
+.post-content p {
+  margin-bottom: 1.5rem;
+  text-align: justify;
+}
+
+.post-footer {
+  margin-top: 2rem;
+  padding-top: 2rem;
+  border-top: 2px solid #f0f0f0;
+}
+
+/* Buttons */
+.back-btn,
+.primary-btn,
+.secondary-btn {
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  font-size: 1rem;
+}
+
+.back-btn {
+  background: #f0f0f0;
+  color: #333;
+  margin-bottom: 2rem;
+}
+
+.back-btn:hover {
+  background: #e0e0e0;
+  transform: translateX(-4px);
+}
+
+.primary-btn {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  margin-right: 1rem;
+}
+
+.primary-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(102, 126, 234, 0.4);
+}
+
+.secondary-btn {
+  background: #f0f0f0;
+  color: #333;
+}
+
+.secondary-btn:hover {
+  background: #e0e0e0;
+}
+
+/* 404 Page */
+.not-found-container {
+  text-align: center;
+  padding: 3rem 2rem;
+}
+
+.not-found-container h1 {
+  font-size: 5rem;
+  color: #667eea;
+  margin-bottom: 0.5rem;
+}
+
+.not-found-container h2 {
+  font-size: 1.8rem;
+  color: #333;
+  margin-bottom: 1rem;
+}
+
+.not-found-container p {
+  font-size: 1.1rem;
+  color: #666;
+  margin-bottom: 2rem;
+}
+
+.not-found-actions {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+/* Error Container */
+.error-container {
+  background: #fee;
+  border: 2px solid #fcc;
+  border-radius: 8px;
+  padding: 2rem;
+  text-align: center;
+}
+
+.error-container h2 {
+  color: #c33;
+  margin-bottom: 1rem;
+}
+
+@media (max-width: 768px) {
+  .page-container {
+    padding: 1rem;
+  }
+
+  .hero h1 {
+    font-size: 1.8rem;
+  }
+
+  .posts-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .post-detail {
+    padding: 0;
+  }
+
+  .post-header h1 {
+    font-size: 1.5rem;
+  }
+
+  .not-found-container h1 {
+    font-size: 3rem;
+  }
+
+  .not-found-actions {
+    flex-direction: column;
+  }
+}
