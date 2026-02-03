@@ -1,32 +1,30 @@
-import React, { Suspense } from 'react';
-import { Outlet, Link } from '@tanstack/react-router';
-import '../styles/layout.css';
+import React from "react";
+import { Link, Outlet } from "@tanstack/react-router";
 
-export function RootLayout() {
+export const RootLayout = () => {
   return (
-    <div className="app-layout">
-      <nav className="navbar">
-        <div className="navbar-content">
-          <Link to="/" className="logo">
-            📚 Blog App
-          </Link>
-          <div className="nav-links">
-            <Link to="/" className="nav-link">
-              Home
-            </Link>
-          </div>
-        </div>
+    <div className="app-container">
+      <nav
+        style={{
+          padding: "1rem",
+          borderBottom: "1px solid #ccc",
+          display: "flex",
+          gap: "15px",
+          backgroundColor: "#fff",
+        }}
+      >
+        <Link
+          to="/"
+          className="nav-link"
+          activeProps={{ style: { fontWeight: "bold" } }}
+        >
+          Home
+        </Link>
       </nav>
 
-      <Suspense fallback={<div className="loading">Loading...</div>}>
-        <main className="main-content">
-          <Outlet />
-        </main>
-      </Suspense>
-
-      <footer className="footer">
-        <p>&copy; 2026 Blog Application. Built with React & Tanstack Router.</p>
-      </footer>
+      <main style={{ padding: "20px" }}>
+        <Outlet />
+      </main>
     </div>
   );
-}
+};
